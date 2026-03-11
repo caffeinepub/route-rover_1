@@ -1,0 +1,45 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-17T09:46:46.943Z",
+  "summary": "BuildRequest contains no explicit implementation requirements. The diff primarily adds/expands backend canister functionality (profiles/budgets/expenses/notes/access control) and updates global styling/animations and the Home page UI. Backend feature work appears outside the stated non-goals for this change request.",
+  "missing_requirements": [],
+  "hallucinated_features": [
+    {
+      "description": "Added/expanded backend domain features (user profiles, budget categories/budgets/expenses, travel notes, trip ownership tracking) in the Motoko canister.",
+      "reason": "BuildRequest lists no requirements and explicitly calls out as non-goals adding new backend features or changing canister state/schema.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Introduced/expanded backend authorization/access-control role management APIs (initializeAccessControl, getCallerUserRole, assignCallerUserRole, isCallerAdmin) and permission checks around profile access.",
+      "reason": "Not requested by the BuildRequest (and backend feature work is a stated non-goal).",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Global theme overhaul to a warm OKLCH color system plus multiple new animation keyframes/classes and particle-effect styling.",
+      "reason": "Not requested explicitly (BuildRequest has no requirements); this is additional UI/theming work beyond the stated change request scope.",
+      "evidence": [
+        "frontend/src/index.css"
+      ]
+    },
+    {
+      "description": "Enhanced interactive Home page behaviors beyond navigation (mouse/scroll parallax state, intersection-observer stats counter animation, feature card active state, additional UI sections/components).",
+      "reason": "Not requested explicitly (BuildRequest has no requirements); represents extra functionality/UI complexity beyond preserving existing auth/navigation behavior.",
+      "evidence": [
+        "frontend/src/pages/HomePage.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.72,
+  "changed_files": [
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/src/index.css",
+    "frontend/src/pages/HomePage.tsx",
+    "project_state.json"
+  ]
+}

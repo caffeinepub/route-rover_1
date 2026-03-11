@@ -1,0 +1,32 @@
+{
+  "kind": "build_request",
+  "title": "Interactive Home Page Change Request (Already Covered)",
+  "projectName": "Route Rover",
+  "priority": "normal",
+  "requirements": [],
+  "constraints": [
+    "Do not modify any files under frontend/src/components/ui (shadcn UI components are read-only).",
+    "Do not modify immutable hook/bootstrap files: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx.",
+    "Keep the Home page authentication/navigation behavior unchanged (if the user is logged in, auto-redirect to /dashboard; otherwise allow navigation to /login).",
+    "Keep reduced-motion support (respect prefers-reduced-motion) for any homepage animation changes."
+  ],
+  "nonGoals": [
+    "Adding new backend features or changing Motoko canister state/schema.",
+    "Changing login/auth provider (Internet Identity only).",
+    "Implementing unrelated Dashboard features (weather, transport, map, chat) unless required specifically for the homepage change."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

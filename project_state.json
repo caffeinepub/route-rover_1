@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Route Rover personalized travel planner app with an interactive/realistic homepage UI, weather forecasting/alerts, popular destinations, transportation suggestions, and map-based distance tracking (with optional non-LLM chat UI).",
+  "architectural_notes": [
+    "Platform limitation: external LLM integrations (e.g., ChatGPT/OpenAI) are not supported; only a standalone chat UI can be added.",
+    "Weather alerts/forecast intended via public weather API calls from the frontend."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-revamp-the-home-page-replacing-the-current-hero-background-experience-with-a-more-interactive-and-realistic-travel-themed-hero-e-g-animated-route-lines-subtle-depth-parallax-responsive-motion-while-keeping-the-existing-login-navigation-behavior-auto-redirect-logged-in-users-to-dashboard",
+      "title": "Revamp the Home page (/), replacing the current hero/background experience with a more interactive and realistic travel-themed hero (e.g., animated route lines, subtle depth/parallax, responsive motion), while keeping the existing login/navigation behavior (auto-redirect logged-in users to /dashboard).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-real-weather-forecasting-and-weather-alerts-for-selected-destinations-by-replacing-the-current-mocked-weather-data-in-the-weatherwidget-with-data-fetched-from-a-public-weather-api-that-does-not-require-an-api-key-or-uses-a-documented-free-endpoint-and-surface-alerts-prominently-in-the-ui",
+      "title": "Implement real weather forecasting and weather alerts for selected destinations by replacing the current mocked weather data in the WeatherWidget with data fetched from a public weather API that does not require an API key (or uses a documented free endpoint), and surface alerts prominently in the UI.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-popular-destinations-experience-across-the-app-expand-the-destination-set-and-present-it-as-an-engaging-browsable-section-cards-carousel-grid-with-filtering-sorting-and-connect-selection-to-the-existing-destination-driven-widgets-weather-transport-traffic",
+      "title": "Add a “Popular Destinations” experience across the app: expand the destination set and present it as an engaging, browsable section (cards/carousel/grid) with filtering/sorting, and connect selection to the existing destination-driven widgets (weather, transport, traffic).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-enhance-transportation-suggestions-so-users-can-compare-realistic-options-for-a-selected-destination-including-at-minimum-duration-estimated-cost-and-a-simple-recommendation-indicator-e-g-fastest-cheapest-eco-and-allow-users-to-set-an-origin-city-or-coordinates-to-make-results-contextual",
+      "title": "Enhance transportation suggestions so users can compare realistic options for a selected destination, including at minimum duration, estimated cost, and a simple recommendation indicator (e.g., fastest/cheapest/eco), and allow users to set an origin (city or coordinates) to make results contextual.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-in-app-map-view-that-lets-users-place-select-an-origin-and-destination-and-shows-the-distance-between-them-in-kilometers-with-clear-ui-controls-and-readable-distance-output",
+      "title": "Add an in-app map view that lets users place/select an origin and destination and shows the distance between them in kilometers, with clear UI controls and readable distance output.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-in-app-chat-assistant-ui-no-chatgpt-openai-integration-that-provides-local-rule-based-help-content-responses-related-to-the-app-s-travel-planning-features-weather-destinations-budget-transport-distance",
+      "title": "Add an in-app chat assistant UI (no ChatGPT/OpenAI integration) that provides local, rule-based/help-content responses related to the app’s travel planning features (weather, destinations, budget, transport, distance).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-unify-the-visual-theme-across-home-login-dashboard-and-destination-related-components-to-match-the-route-rover-logo-s-warm-palette-amber-orange-rose-and-reduce-conflicting-blue-purple-gradients-while-keeping-dark-mode-support",
+      "title": "Unify the visual theme across Home, Login, Dashboard, and destination-related components to match the Route Rover logo’s warm palette (amber/orange/rose) and reduce conflicting blue/purple gradients, while keeping dark mode support.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Revamp homepage to be more interactive and realistic (replace current interactive homepage/background styling)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add weather forecasting and weather alerts",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add Popular Destinations section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Suggest transportation options for destinations/routes",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add map feature and track destination distance in kilometers",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add in-app chat assistant UI (no ChatGPT/OpenAI integration)",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Route Rover",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

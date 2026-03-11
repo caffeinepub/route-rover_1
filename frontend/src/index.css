@@ -1,0 +1,267 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm amber/orange/rose color system using OKLCH */
+    --background: oklch(98% 0.02 85);
+    --foreground: oklch(25% 0.02 85);
+    --card: oklch(100% 0 0);
+    --card-foreground: oklch(25% 0.02 85);
+    --popover: oklch(100% 0 0);
+    --popover-foreground: oklch(25% 0.02 85);
+    --primary: oklch(65% 0.18 45);
+    --primary-foreground: oklch(100% 0 0);
+    --secondary: oklch(95% 0.02 85);
+    --secondary-foreground: oklch(25% 0.02 85);
+    --muted: oklch(95% 0.02 85);
+    --muted-foreground: oklch(50% 0.02 85);
+    --accent: oklch(92% 0.05 75);
+    --accent-foreground: oklch(25% 0.02 85);
+    --destructive: oklch(55% 0.22 25);
+    --destructive-foreground: oklch(100% 0 0);
+    --border: oklch(90% 0.02 85);
+    --input: oklch(90% 0.02 85);
+    --ring: oklch(65% 0.18 45);
+    --radius: 0.5rem;
+    --chart-1: oklch(65% 0.18 45);
+    --chart-2: oklch(70% 0.16 55);
+    --chart-3: oklch(60% 0.14 35);
+    --chart-4: oklch(75% 0.12 65);
+    --chart-5: oklch(55% 0.20 25);
+  }
+
+  .dark {
+    --background: oklch(20% 0.02 85);
+    --foreground: oklch(95% 0.02 85);
+    --card: oklch(22% 0.02 85);
+    --card-foreground: oklch(95% 0.02 85);
+    --popover: oklch(22% 0.02 85);
+    --popover-foreground: oklch(95% 0.02 85);
+    --primary: oklch(70% 0.16 55);
+    --primary-foreground: oklch(20% 0.02 85);
+    --secondary: oklch(28% 0.02 85);
+    --secondary-foreground: oklch(95% 0.02 85);
+    --muted: oklch(28% 0.02 85);
+    --muted-foreground: oklch(65% 0.02 85);
+    --accent: oklch(30% 0.05 75);
+    --accent-foreground: oklch(95% 0.02 85);
+    --destructive: oklch(50% 0.22 25);
+    --destructive-foreground: oklch(95% 0.02 85);
+    --border: oklch(30% 0.02 85);
+    --input: oklch(30% 0.02 85);
+    --ring: oklch(70% 0.16 55);
+    --chart-1: oklch(70% 0.16 55);
+    --chart-2: oklch(75% 0.14 65);
+    --chart-3: oklch(65% 0.12 45);
+    --chart-4: oklch(80% 0.10 75);
+    --chart-5: oklch(60% 0.18 35);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes ping-slow {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animation classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.animate-ping-slow {
+  animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out;
+}
+
+.animate-fade-in-delay-1 {
+  animation: fade-in-up 1s ease-out 0.2s both;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fade-in-up 1s ease-out 0.4s both;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+/* Particle effects */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(251, 191, 36, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.particle-1 {
+  top: 20%;
+  left: 10%;
+  animation: float 8s ease-in-out infinite, pulse-slow 3s ease-in-out infinite;
+}
+
+.particle-2 {
+  top: 40%;
+  left: 80%;
+  animation: float 10s ease-in-out infinite 1s, pulse-slow 4s ease-in-out infinite 0.5s;
+}
+
+.particle-3 {
+  top: 60%;
+  left: 20%;
+  animation: float 12s ease-in-out infinite 2s, pulse-slow 5s ease-in-out infinite 1s;
+}
+
+.particle-4 {
+  top: 80%;
+  left: 70%;
+  animation: float 9s ease-in-out infinite 1.5s, pulse-slow 3.5s ease-in-out infinite 1.5s;
+}
+
+.particle-5 {
+  top: 30%;
+  left: 50%;
+  animation: float 11s ease-in-out infinite 0.5s, pulse-slow 4.5s ease-in-out infinite 2s;
+}
+
+.particle-6 {
+  top: 50%;
+  left: 30%;
+  animation: float 13s ease-in-out infinite 2.5s, pulse-slow 5.5s ease-in-out infinite 0.8s;
+}
+
+.particle-7 {
+  top: 70%;
+  left: 60%;
+  animation: float 10.5s ease-in-out infinite 1.8s, pulse-slow 4.2s ease-in-out infinite 1.2s;
+}
+
+.particle-8 {
+  top: 15%;
+  left: 90%;
+  animation: float 14s ease-in-out infinite 3s, pulse-slow 6s ease-in-out infinite 2.5s;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .particle {
+    display: none;
+  }
+}
+
+/* Accordion animations */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
